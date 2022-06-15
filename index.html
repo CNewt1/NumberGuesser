@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess My Number!</title>
+  </head>
+  <body>
+    <header>
+      <button class="show-modal btn">About</button>
+      <h1>Guess My Number!</h1>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <p class="modal-p">
+          This game generates a random number between 1 and 20. The player has
+          20 attempts to guess the number correctly. If the guess is too high,
+          the messager "Too high!" will be displayed on the right side of the
+          screen. If the guess is too low, the message "too low!" will be
+          displayed instead. Once the number is guessed correctly your highscore
+          will be saved for this current session. Hit "Reset!" to play again and
+          try for a new highscore. Use the X or Press Esc to exit this window.
+        </p>
+      </div>
+      <div class="overlay hidden"></div>
+      <section class="left">
+        <p class="between">(Between 1 and 20)</p>
+        <input type="number" class="guess" />
+        <button class="btn check">Check!</button>
+        <button class="btn again">Reset!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
